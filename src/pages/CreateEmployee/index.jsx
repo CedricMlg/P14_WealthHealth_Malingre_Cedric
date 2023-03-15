@@ -5,6 +5,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function CreateEmployee() {
+  const [birthDate, setBirthDate] = useState(new Date());
   const [startDate, setStartDate] = useState(new Date());
 
   const departments = {
@@ -276,12 +277,15 @@ export default function CreateEmployee() {
 
           <label htmlFor="date-of-birth">Date of Birth</label>
           <DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
+            selected={birthDate}
+            onChange={(date) => setBirthDate(date)}
           />
 
           <label htmlFor="start-date">Start Date</label>
-          <input id="start-date" type="text" />
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+          />
 
           <fieldset className="address">
             <legend>Address</legend>
