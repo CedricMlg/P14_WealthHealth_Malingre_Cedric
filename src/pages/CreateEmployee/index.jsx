@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Dropdown } from "cedricm-wealthhealth-dropdown";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function CreateEmployee() {
+  const [startDate, setStartDate] = useState(new Date());
+
   const departments = {
     label: "departments",
     options: [
@@ -270,9 +274,11 @@ export default function CreateEmployee() {
           <label htmlFor="last-name">Last Name</label>
           <input type="text" id="last-name" />
 
-          {/* <label htmlFor="date-of-birth">Date of Birth</label>
-          <input id="date-of-birth" type="text" />
-          date */}
+          <label htmlFor="date-of-birth">Date of Birth</label>
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+          />
 
           <label htmlFor="start-date">Start Date</label>
           <input id="start-date" type="text" />
