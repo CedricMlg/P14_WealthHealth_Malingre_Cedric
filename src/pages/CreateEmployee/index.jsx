@@ -1,7 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Dropdown } from "cedricm-wealthhealth-dropdown";
 
 export default function CreateEmployee() {
+  const departements = {
+    label: "departements",
+    options: [
+      { value: "sales", name: "sales" },
+      { value: "marketing", name: "marketing" },
+      { value: "engineering", name: "engineering" },
+      { value: "human resources", name: "human resources" },
+      { value: "legal", name: "legal" },
+    ],
+  };
+
   return (
     <div className="create-employee">
       <div className="title">
@@ -39,10 +51,10 @@ export default function CreateEmployee() {
             <input id="zip-code" type="number" />
           </fieldset>
 
-          {/* select */}
+          <Dropdown {...departements} />
         </form>
 
-        <button onclick="saveEmployee()">Save</button>
+        {/* <button onClick="saveEmployee()">Save</button> */}
       </div>
       {/* modal */}
     </div>
