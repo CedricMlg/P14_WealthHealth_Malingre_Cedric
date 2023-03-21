@@ -1,0 +1,11 @@
+{
+  "label": "departments",
+  "options": [
+    { "value": "", "name": "" },
+    { "value": "sales", "name": "sales" },
+    { "value": "marketing", "name": "marketing" },
+    { "value": "engineering", "name": "engineering" },
+    { "value": "human resources", "name": "human resources" },
+    { "value": "legal", "name": "legal" }
+  ]
+}
