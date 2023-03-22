@@ -152,9 +152,7 @@ export default function CreateEmployee() {
         ></button>
 
         {isEmpty ? (
-          <p>
-            At least one of the fields is empty or wasn't selected.
-          </p>
+          <p>At least one of the fields is empty or wasn't selected.</p>
         ) : (
           <p>Employee Created!</p>
         )}
