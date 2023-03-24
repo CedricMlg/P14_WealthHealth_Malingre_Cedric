@@ -5,6 +5,7 @@ import DatePicker from "react-datepicker";
 import Modal from "react-modal";
 import departments from "../../data/dropdown/departments.json";
 import states from "../../data/dropdown/states.json";
+import { data } from "../../data/data-table/data.js";
 import "react-datepicker/dist/react-datepicker.css";
 
 Modal.setAppElement("#root");
@@ -34,8 +35,8 @@ export default function CreateEmployee() {
     const employee = {
       firstName: firstName,
       lastName: lastName,
-      dateOfBirth: birthDate,
-      startDate: startDate,
+      dateOfBirth: birthDate.toLocaleDateString("en-US"),
+      startDate: startDate.toLocaleDateString("en-US"),
       street: street,
       city: city,
       state: state,
@@ -51,6 +52,7 @@ export default function CreateEmployee() {
       return;
     }
 
+    data.push(employee);
     setIsEmpty(false);
     openModal();
   }

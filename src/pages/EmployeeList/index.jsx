@@ -84,6 +84,7 @@ export default function EmployeeList() {
       </>
     );
   }, [filterText, resetPaginationToggle]);
+  console.log(data);
 
   return (
     <div>
