@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { NavLink } from "react-router-dom";
 import DataTable from "react-data-table-component";
-import { data } from "../../data/data-table/data.js";
+import { useAtom } from "jotai";
+import { employeesAtom } from "../../pages/CreateEmployee";
 
 const columns = [
   {
@@ -52,9 +53,10 @@ const columns = [
 ];
 
 export default function EmployeeList() {
+  const [employees] = useAtom(employeesAtom);
   const [filterText, setFilterText] = useState("");
   const [resetPaginationToggle, setResetPaginationToggle] = useState(false);
-  const filteredItems = data.filter(
+  const filteredItems = employees.filter(
     (item) =>
       item.lastName &&
       item.lastName.toLowerCase().includes(filterText.toLowerCase())
@@ -73,7 +75,7 @@ export default function EmployeeList() {
         <input
           id="search"
           type="text"
-          placeholder="Filter By Name"
+          placeholder="Filter By Last Name"
           aria-label="Search Input"
           value={filterText}
           onChange={(e) => setFilterText(e.target.value)}
@@ -84,7 +86,6 @@ export default function EmployeeList() {
       </>
     );
   }, [filterText, resetPaginationToggle]);
-  console.log(data);
 
   return (
     <div>

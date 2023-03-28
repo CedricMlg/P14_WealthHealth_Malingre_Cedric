@@ -5,10 +5,13 @@ import DatePicker from "react-datepicker";
 import Modal from "react-modal";
 import departments from "../../data/dropdown/departments.json";
 import states from "../../data/dropdown/states.json";
-import { data } from "../../data/data-table/data.js";
+import { atom, useAtom } from "jotai";
 import "react-datepicker/dist/react-datepicker.css";
 
 Modal.setAppElement("#root");
+
+export const employeesAtom = atom([]);
+export const employeesArray = [];
 
 export default function CreateEmployee() {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -22,6 +25,7 @@ export default function CreateEmployee() {
   const [zipCode, setZipCode] = useState("");
   const [department, setDepartment] = useState("");
   const [isEmpty, setIsEmpty] = useState(true);
+  const [employees, setEmployees] = useAtom(employeesAtom);
 
   function openModal() {
     setIsOpen(true);
@@ -52,7 +56,8 @@ export default function CreateEmployee() {
       return;
     }
 
-    data.push(employee);
+    employeesArray.push(employee);
+    setEmployees(employeesArray);
     setIsEmpty(false);
     openModal();
   }
