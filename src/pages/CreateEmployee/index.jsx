@@ -13,6 +13,12 @@ Modal.setAppElement("#root");
 export const employeesAtom = atom([]);
 export const employeesArray = [];
 
+/**
+ * When the user clicks the save button, the saveEmployee function will check if any of the values in
+ * the employee object are empty. If they are, the modal will open and the user will be notified that
+ * at least one of the fields is empty. If not, the employee object will be pushed to the
+ * employeesArray and the employees state will be set to the employeesArray.
+ */
 export default function CreateEmployee() {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [firstName, setFirstName] = useState("");
@@ -27,14 +33,26 @@ export default function CreateEmployee() {
   const [isEmpty, setIsEmpty] = useState(true);
   const [employees, setEmployees] = useAtom(employeesAtom);
 
+/**
+ * When the user clicks on the button, the modal will open.
+ */
   function openModal() {
     setIsOpen(true);
   }
 
+/**
+ * When the user clicks the close button, the modal will close.
+ */
   function closeModal() {
     setIsOpen(false);
   }
 
+/**
+ * If any of the values in the employee object are empty, set the isEmpty state to true and open the
+ * modal. If not, push the employee object to the employeesArray and set the employees state to the
+ * employeesArray.
+ * @returns the value of the variable employeesArray.
+ */
   function saveEmployee() {
     const employee = {
       firstName: firstName,
@@ -62,10 +80,16 @@ export default function CreateEmployee() {
     openModal();
   }
 
+/**
+ * The handleStateChange function takes a state as an argument and sets the state to the argument.
+ */
   function handleStateChange(state) {
     setState(state);
   }
 
+/**
+ * When the department changes, set the department to the new department.
+ */
   function handleDepartmentChange(department) {
     setDepartment(department);
   }

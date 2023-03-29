@@ -52,16 +52,23 @@ const columns = [
   },
 ];
 
+/* The above code is a React component that is using the useAtom hook to get the employeesAtom from the
+store. It is then using the useState hook to set the filterText state. It is then using the useMemo
+hook to create a subHeaderComponentMemo. The subHeaderComponentMemo is then used in the DataTable
+component. */
 export default function EmployeeList() {
   const [employees] = useAtom(employeesAtom);
   const [filterText, setFilterText] = useState("");
   const [resetPaginationToggle, setResetPaginationToggle] = useState(false);
+  
+/* Filtering the employees array by the lastName property. */
   const filteredItems = employees.filter(
     (item) =>
       item.lastName &&
       item.lastName.toLowerCase().includes(filterText.toLowerCase())
   );
 
+/* Creating a subHeaderComponentMemo that is used in the DataTable component. */
   const subHeaderComponentMemo = useMemo(() => {
     const handleClear = () => {
       if (filterText) {
