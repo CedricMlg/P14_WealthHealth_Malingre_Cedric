@@ -12,7 +12,8 @@ h1,
 h2,
 button,
 select,
-label, div {
+label,
+div {
   font-family: var(--main-font);
   color: black;
   white-space: nowrap;
@@ -100,6 +101,10 @@ label {
   padding: 20px;
 }
 
+.modal p {
+  white-space: normal;
+}
+
 .home {
   display: flex;
   justify-content: space-between;
@@ -107,10 +112,18 @@ label {
   margin-top: 25%;
 }
 
-.sc-dKfzgJ input{
+.sc-dKfzgJ input {
   padding: 5px;
 }
 
-.container button {
+.sc-dKfzgJ button {
   margin-top: 0;
+}
+
+.jWpMhA {
+  flex-wrap: wrap;
+}
+
+.cKBiPJ {
+  flex-wrap: wrap;
 }

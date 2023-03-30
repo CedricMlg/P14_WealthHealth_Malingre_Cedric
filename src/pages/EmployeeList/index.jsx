@@ -60,15 +60,15 @@ export default function EmployeeList() {
   const [employees] = useAtom(employeesAtom);
   const [filterText, setFilterText] = useState("");
   const [resetPaginationToggle, setResetPaginationToggle] = useState(false);
-  
-/* Filtering the employees array by the lastName property. */
+
+  /* Filtering the employees array by the lastName property. */
   const filteredItems = employees.filter(
     (item) =>
       item.lastName &&
       item.lastName.toLowerCase().includes(filterText.toLowerCase())
   );
 
-/* Creating a subHeaderComponentMemo that is used in the DataTable component. */
+  /* Creating a subHeaderComponentMemo that is used in the DataTable component. */
   const subHeaderComponentMemo = useMemo(() => {
     const handleClear = () => {
       if (filterText) {
