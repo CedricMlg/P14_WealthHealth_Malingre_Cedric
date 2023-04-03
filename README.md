@@ -22,10 +22,14 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    yarn
    ```
-3. Launch project on builded version
+3. Build project
+   ```js
+   yarn build
+   ```
+4. Launch project on builded version
    ```js
    yarn preview
    ```
-4. Open project 
+5. Open project 
    <br />
    Click on the local link while pressing CTRL
