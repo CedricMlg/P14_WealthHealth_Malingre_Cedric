@@ -95,7 +95,7 @@ export default function EmployeeList() {
   }, [filterText, resetPaginationToggle]);
 
   return (
-    <div>
+    <div className="current-employee">
       {" "}
       <div id="employee-div" className="container">
         <h1>Current Employees</h1>
