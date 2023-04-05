@@ -519,10 +519,10 @@ caniuse-lite@^1.0.30001449:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001464.tgz#888922718df48ce5e33dcfe1a2af7d42676c5eb7"
   integrity sha512-oww27MtUmusatpRpCGSOneQk2/l5czXANDSFvsc7VuOQ86s3ANhZetpwXNf1zY/zdfP63Xvjz325DAdAoES13g==
 
-cedricm_dropdown@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/cedricm_dropdown/-/cedricm_dropdown-1.0.4.tgz#d867ffc0996d89eef435acf69789832fb5465a10"
-  integrity sha512-rvuPZq4Gor7OPoJtA/eL2zXCE9RnQmCv4N1R27SWkN63jHyndyIbC4nP7hJwRQD+MDuaPS4lymShFmu2BNLu3A==
+cedricm_dropdown@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/cedricm_dropdown/-/cedricm_dropdown-1.0.5.tgz#0eeffcef9815102c3790c0b6980e3dbfd4635cb4"
+  integrity sha512-2807cdpY8iUImBvWB+xF5X/iQHWLO4qMPqFZcx0+EqkrPeOtrArTIGeqvphz6ZfZ9sEj2LHWKO46afH202xohA==
 
 chalk@^2.0.0:
   version "2.4.2"

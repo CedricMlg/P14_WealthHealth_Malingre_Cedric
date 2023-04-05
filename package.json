@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "cedricm_dropdown": "^1.0.4",
+    "cedricm_dropdown": "^1.0.5",
     "jotai": "^2.0.3",
     "react": "^18.2.0",
     "react-data-table-component": "^7.5.3",
